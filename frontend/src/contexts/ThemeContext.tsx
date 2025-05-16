@@ -21,7 +21,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       setTheme(savedTheme);
       document.documentElement.classList.toggle('dark', savedTheme === 'dark');
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      // Check system preference
       setTheme('dark');
       document.documentElement.classList.add('dark');
     }

@@ -32,6 +32,7 @@ export default function Todos() {
   const fetchTodos = async () => {
     try {
       const res = await fetch('http://localhost:3001/api/todos', {
+        method: 'GET',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
